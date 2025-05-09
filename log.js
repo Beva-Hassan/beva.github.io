@@ -6,8 +6,6 @@ let btnlog= document.getElementsByClassName('log')[0];
 let row= document.getElementsByClassName('row')[0];
 let arrow=  document.getElementById('arrow');
 let arrowlog= document.getElementsByClassName('arrow')[0];
-let dark=document.getElementsByClassName('mode-images')[0];
-let or= document.getElementById('or');
 btncreat.onclick= function(){
     welcome.classList.add('hide');
     register.classList.remove('hide');
