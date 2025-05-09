@@ -29,8 +29,5 @@ arrowlog.onclick = function(){
     welcome.classList.remove('hide');
     row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; 
 }
-dark.onclick=function(){
-    document.body.style.backgroundColor= '#322f2f';
-    row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; 
-    or.style.color='white';
-}
+
+
