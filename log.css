@@ -686,3 +686,9 @@ img{
 a{
   text-decoration: none;
 }
+body.dark-mode {
+  background-color: #000000f3;
+}
+body.dark-mode #or{
+  color:white;
+}
