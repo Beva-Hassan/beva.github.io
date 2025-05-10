@@ -85,37 +85,7 @@
     </div>
   </div>
   <script>
-    document.querySelector("button[type='submit']").addEventListener("click", function(event) {
-  event.preventDefault();  // Prevent form submission
-
-  // Check if all fields are filled out
-  const inputs = document.querySelectorAll("input, select");  // Get all input and select fields
-  let allFilled = true;
-
-  inputs.forEach(input => {
-    if (input.type !== "radio" && input.type !== "checkbox" && !input.value) {  // Check if the field is empty
-      allFilled = false;
-      input.style.borderColor = "red";  // Change border color to red for empty fields
-    } else {
-      input.style.borderColor = "#ccc";  // Reset border color if filled
-    }
-  });
-
-
-  if (!allFilled) {
-    this.style.backgroundColor = "red";  // Change button color to red if any field is empty
-    alert("Please fill in all fields.");
-  } else {
-    // If all fields are filled, confirm before submitting
-    const confirmation = confirm("Are you sure you want to submit your shipping address?");
-    if (confirmation) {
-      this.innerText = "Done"; 
-      this.style.backgroundColor = "#28a745";  // Change button color to green when confirmed
-    } else {
-      this.style.backgroundColor = "red";  // Change button color to red if not confirmed
-    }
-  }
-});
+ 
 document.getElementById("phone").addEventListener("input", function() {
   const phoneValue = this.value;  
   const phonePattern = /^[0-9]{10,15}$/;
