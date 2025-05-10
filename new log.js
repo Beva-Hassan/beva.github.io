@@ -6,24 +6,42 @@ let btnlog= document.getElementsByClassName('log')[0];
 let row= document.getElementsByClassName('row')[0];
 let arrow=  document.getElementById('arrow');
 let arrowlog= document.getElementsByClassName('arrow')[0];
+let dark=document.getElementsByClassName('mode-images')[0];
+let or= document.getElementById('or');
 btncreat.onclick= function(){
     welcome.classList.add('hide');
     register.classList.remove('hide');
-    row.style.backgroundColor='rgba(247, 228, 245, 0.65)';
+    row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; ;
 }
 btnlog.onclick= function(){
     welcome.classList.add('hide');
     login.classList.remove('hide');
-    row.style.backgroundColor='rgba(247, 228, 245, 0.65)';
+    row.style.backgroundColor='rgba(253, 244, 252, 0.99)';
 }
 arrow.onclick= function(){ 
     login.classList.add('hide');
     register.classList.add('hide');
     welcome.classList.remove('hide');
-    row.style.backgroundColor='rgba(170, 17, 117, 0.333)'; 
+    row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; ; 
 }
 arrowlog.onclick = function(){
     login.classList.add("hide");
     welcome.classList.remove('hide');
-    row.style.backgroundColor='rgba(170, 17, 117, 0.333)'; 
+    row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; 
 }
+dark.onclick=function toggleDarkMode(){
+    
+    // document.body.style.backgroundColor= '#000000f3';
+    // row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; 
+    // or.style.color='white';
+               document.body.classList.toggle('dark-mode');
+            
+           
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        }
+
+
