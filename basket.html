@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,11 +144,11 @@
     }
     .basket-container {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 80px auto 0 auto;
       background-color: rgb(255,240,247);
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 15px;
+      padding: 12px;
 
     }
     h1 {
@@ -158,9 +159,7 @@
       padding-top: 50px;
     }
     
-    h3 {
-            text-align: center;
-    }
+    
     .text-gray-400 {
             text-align: center;
     }
@@ -433,12 +432,6 @@
 
 
 
-<script>
-  function toggleDarkMode() {
-    
-    document.body.classList.toggle('dark-mode');
-  }
-</script>
 
 <script>
   let products = JSON.parse(localStorage.getItem('basket')) || [];
