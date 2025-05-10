@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>log in or sign up</title>
-    <link rel="stylesheet" href="infor.css">
+    <link rel="stylesheet" href="log.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -118,7 +118,7 @@
                     </form>
                     <span id="arrow" class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
                 </div>
-                <img src="../img/aa7.jpg" alt="flower">
+                <img src="https://i.postimg.cc/Yqp2wJJF/photo-2025-05-06-12-28-26.jpg" alt="flower">
             </div>
 
         </section>
@@ -195,12 +195,26 @@
                 </div>
             </div>
             <script>
-                function toggleDarkMode() {
+             window.onload = function() {
+           
+            if (localStorage.getItem('dark-mode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        };
 
-                    document.body.classList.toggle('dark-mode');
-                }
+        
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+           
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        }
             </script>
-    <script src="new.js"></script>
+    <script src="log.js"></script>
 </body>
 
 </html>
