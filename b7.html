@@ -49,7 +49,7 @@
  <div class="product-details"><pre> <strong>One Size</strong>          <b>3500</b> EGP </div>     </pre>
  <div class="message">
                       
-  <span class="cart" >   <button type="submit" class="add" onclick="openPopup()" >  <span class="material-icons">
+  <span class="cart" >   <button type="submit" class="add" onclick="addToCart()" >  <span class="material-icons">
        shopping_cart</span>  Add To Cart  </button> </span>
             <div class="popup" id="popup">
               <img src="https://i.postimg.cc/Bnsg5bDd/photo-2025-05-03-01-21-22-removebg-preview.png">
@@ -61,15 +61,44 @@
            </div>
            </div>
           <script src="script.js"></script>
-          <script>let popup = document.getElementById("popup");
-           function openPopup()
-           {
-              popup.classList.add("open-popup");
-           }
-           function closePopup()
-           {
-              popup.classList.remove("open-popup");
-           }</script>
+         <script>
+    function addToCart(){ 
+         const product={
+            
+            id: 23,
+name: "Eternal Bloom",
+price: 3500,
+image: "https://i.postimg.cc/X7zbhS6X/photo-2025-04-28-22-42-26-removebg-preview.png",
+quantity: 1
+         };
+
+
+         let basket = JSON.parse(localStorage.getItem('basket')) || [];
+         const existingProduct = basket.find(p => p.id === product.id);
+         if(existingProduct){
+           existingProduct.quantity += 1;
+         } else{
+           basket.push(product);
+         }
+     localStorage.setItem("basket",JSON.stringify(basket));
+     alert();
+       
+    
+    openPopup();
+     function goToCart(){
+         window.location.href ="basket.html";
+     }
+     function openPopup(){
+         document.getElementById("popup").classList.add("open-popup");
+     }
+    function closePopup()
+    {
+       document.getElementById("popup").classList.remove("open-popup");
+
+    } 
+ 
+    </script>
+    
 </div> 
     <div class="image-container">
       <img src ="https://i.postimg.cc/X7zbhS6X/photo-2025-04-28-22-42-26-removebg-preview.png" alt=" common sunflower " width="200" height="150" class=" custom-image"> <br>
