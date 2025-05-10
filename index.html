@@ -121,9 +121,10 @@
  </div> 
  
 </div>
-<!-- الأسهم -->
+
 <button onclick="moveLeft()" style="position: absolute; top: 40%; left: 0; background: pink; border: none; font-size: 24px; padding: 5px;">‹</button>
 <button onclick="moveRight()" style="position: absolute; top: 40%; right: 0; background: pink; border: none; font-size: 24px; padding: 5px;">›</button>
+
 
 </div>
 
@@ -156,9 +157,6 @@ if (position < 0) {
 }
 </script>
 
-
-
-
   
 <!-- Quick access links -->
 <div class="quick-links">
@@ -186,64 +184,21 @@ if (position < 0) {
   <p>POTTED ROSES</p>
 </div>
 </div>
-<!--binifts slider-->
-<h2 class="slider-title" style="text-align: center;font-size:60px;font-family: Arial, sans-serif;color:rgb(180, 100, 160)">Our Benefits</h2>
-<div class="slider-container">
-  <div class="slide active">
-    <img src="https://i.postimg.cc/xnhqfSqQ/shipping1.jpg" alt="Image 1">
-    <div class="slide-content">
-      <h2>Shipping</h2>
-      <p>Experience same-day flower delivery to Cairo and Giza.swift shipping ,ensuring your sentiments are delivered promptly </p>
+
+<section class="benefits-section">
+  <h2 class="slider-title">Our Benefits</h2>
+  <div class="slider-container">
+    <div class="slide active">
+      <img src="https://i.postimg.cc/xnhqfSqQ/shipping1.jpg" alt="Image 1">
+      <div class="slide-content">
+        <h2>Shipping</h2>
+        <p>Experience same-day flower delivery to Cairo and Giza. Swift shipping, ensuring your sentiments are delivered promptly.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="slide">
-    <img src="https://i.postimg.cc/QNRbkyNT/fresh1.jpg" alt="Image 2">
-    <div class="slide-content">
-      <h2>Freshness guarantee</h2>
-      <p>Experience premium rose quality with Aura Flora - We source our roses exclusively from the finest farms, ensuring a superior standard</p>
-    </div>
-  </div>
 
-  <div class="slide">
-    <img src="https://i.postimg.cc/VLnF7W5H/privacy1.jpg" alt="Image 3">
-    <div class="slide-content">
-      <h2>Privacy</h2>
-      <p>We handle message cards with utmost confidentiality. Sender info stays private, and no photos of gifts are taken out of respect for your privacy</p>
-    </div>
-  </div>
-
-  <!-- arrows -->
-  <button class="arrow left-arrow" onclick="changeSlide(-1)">&#10094;</button>
-  <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button>
-</div>
-
-<!-- ✅ Script moved here -->
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      if (i === index) {
-        slide.classList.add("active");
-      }
-    });
-  }
-
-  function changeSlide(step) {
-    currentSlide += step;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    if (currentSlide < 0) currentSlide = slides.length - 1;
-    showSlide(currentSlide);
-  }
-
-  // Initialize
-  showSlide(currentSlide);
-</script>
-
-<!--شريط الصور-->
 <div style="text-align: center; padding: 40px;color:rgb(180, 100, 160)">
   <h2 style="font-size: 24px; margin-bottom: 20px;">Follow Us</h2>
   <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px;">
@@ -262,100 +217,6 @@ if (position < 0) {
 </div>
 
 
-
-
-<!-- Scripts -->
-<script>
-  // Get the query parameter from the URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const query = urlParams.get('q');  // Get the search query from the URL
-
-  // If no query is provided in the URL, show a message
-  if (!query) {
-    document.getElementById('results').innerHTML = 'Please enter a search query.';
-  } else {
-    // Data to search through: Content of different pages
-    const pages = [
-      { url: 'index.html', content: 'Flowers, beautiful flowers, and floral arrangements' },
-      { url: 'bouquet.html', content: 'Different types of flowers such as roses and lilies' },
-      { url: 'vases.html', content: 'Elegant vases for use in any occasion' },
-      { url: 'v1.html', content: 'Contact us through this page for all details' },
-      // You can add more pages here
-    ];
-
-    // Filter pages that contain the query word in their content
-    const results = pages.filter(page => page.content.toLowerCase().includes(query.toLowerCase()));
-
-    // Display the results
-    const resultsContainer = document.getElementById('results');
-    if (results.length > 0) {
-      results.forEach(result => {
-        const resultDiv = document.createElement('div');
-        resultDiv.innerHTML = `<a href="${result.url}">${result.url}</a> - ${result.content}`;
-        resultsContainer.appendChild(resultDiv);
-      });
-    } else {
-      resultsContainer.innerHTML = 'No matching results found.';
-    }
-  }
-</script>
-<script>
-  function search() {
-  const query = document.getElementById('searchInput').value.trim();
-  if (query !== "") {
-    window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-  }
-
-  }
-
-  let currentImageIndex = 0;
-  let sliderImages = [
-    "https://www.flowerssoul.com/upload/6655a4688bad312f23833edfb8a002e4_compressed.jpeg",
-    "https://www.flowerssoul.com/upload/1fc4133cdbebd0a7ad6d36b6fa77c150_compressed.jpeg",
-    "https://www.flowerssoul.com/upload/6e8e187f9c456d2e4a808b3b7cd5f652_compressed.jpeg",
-    "https://www.flowerssoul.com/upload/9912875c64cba4366ff9380077ff3edd_compressed.jpeg"
-  ];
-
-  function showImage(index) {
-    const img = document.getElementById("slider-image");
-    if (img) {
-      img.src = sliderImages[index];
-    }
-  }
-
-  function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
-    showImage(currentImageIndex);
-  }
-  setInterval(nextImage, 2000);
-
-  window.onload = function () {
-    showImage(currentImageIndex);
-  };
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const storedLang = localStorage.getItem("language") || "en";
-
-    function changeLanguage(lang) {
-      localStorage.setItem("language", lang);
-      const elements = document.querySelectorAll("[data-en]");
-      elements.forEach(function (element) {
-        element.textContent = element.getAttribute(`data-${lang}`);
-      });
-    }
-
-    changeLanguage(storedLang);
-
-    const flag = document.getElementById("nav-flag");
-    if (flag) {
-      flag.addEventListener("click", function () {
-        const currentLang = localStorage.getItem("language") || "en";
-        const newLang = currentLang === "en" ? "ar" : "en";
-        changeLanguage(newLang);
-      });
-    }
-  });
-</script>
 <!-- footer -->
 <div class="footer-wrapper">
   <footer class="main-footer">
@@ -367,7 +228,6 @@ if (position < 0) {
           <li><a href="aboutus.html" target="_blank">About Us</a></li>
           <li><a href="faqs.html" target="_blank">FAQs</a></li>
           <li><a href="Policy.html" target="_blank">Privacy Policy</a></li>
-          <li><a href="contact.html" target="_blank">Contact Us</a></li>
         </ul>
       </div>
 
