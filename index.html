@@ -128,36 +128,6 @@
 
 </div>
 
-<script>
-let position = 0;
-function moveRight() {
-  const track = document.getElementById("productTrack");
-  const itemWidth = track.children[0].offsetWidth + 10; 
-  const containerWidth = track.parentElement.offsetWidth;
-  const totalItems = track.children.length;
-  const visibleItems = Math.floor(containerWidth / itemWidth);
-  const maxTranslate = (totalItems - visibleItems) * itemWidth;
-
-  if (Math.abs(position) < maxTranslate) {
-    position -= itemWidth;
-    track.style.transform = `translateX(${position}px)`;
-  }
-
-
-}
-
-function moveLeft() {
-const track = document.getElementById("productTrack");
-const itemWidth = track.children[0].offsetWidth + 10;
-
-if (position < 0) {
- position += itemWidth;
- track.style.transform = `translateX(${position}px)`;
-}
-}
-</script>
-
-  
 <!-- Quick access links -->
 <div class="quick-links">
 <h2 href="flowers.html" style="text-align: center;font-size:60px;font-family: Arial, sans-serif;color:rgb(180, 100, 160)">Categories</h2>
@@ -185,8 +155,8 @@ if (position < 0) {
 </div>
 </div>
 
+<h2 class="slider-title">Our Benefits</h2>
 <section class="benefits-section">
-  <h2 class="slider-title">Our Benefits</h2>
   <div class="slider-container">
     <div class="slide active">
       <img src="https://i.postimg.cc/xnhqfSqQ/shipping1.jpg" alt="Image 1">
@@ -280,7 +250,30 @@ if (position < 0) {
 
 
 <script>
+              
+        let currentImageIndex = 0;
+        let sliderImages = [
+          "https://www.flowerssoul.com/upload/6655a4688bad312f23833edfb8a002e4_compressed.jpeg",
+          "https://www.flowerssoul.com/upload/1fc4133cdbebd0a7ad6d36b6fa77c150_compressed.jpeg",
+          "https://www.flowerssoul.com/upload/6e8e187f9c456d2e4a808b3b7cd5f652_compressed.jpeg",
+          "https://www.flowerssoul.com/upload/9912875c64cba4366ff9380077ff3edd_compressed.jpeg"
+        ];
 
+        function showImage(index) {
+          const img = document.getElementById("slider-image");
+          if (img) {
+            img.src = sliderImages[index];
+          }
+        }
+                function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+            showImage(currentImageIndex);
+          }
+          setInterval(nextImage, 2000);
+
+          window.onload = function () {
+            showImage(currentImageIndex);
+          }
 
         window.onload = function() {
            
@@ -300,7 +293,32 @@ if (position < 0) {
                 localStorage.setItem('dark-mode', 'disabled');
             }
         }
-   
+            let position = 0;
+            function moveRight() {
+            const track = document.getElementById("productTrack");
+            const itemWidth = track.children[0].offsetWidth + 10; 
+            const containerWidth = track.parentElement.offsetWidth;
+            const totalItems = track.children.length;
+            const visibleItems = Math.floor(containerWidth / itemWidth);
+            const maxTranslate = (totalItems - visibleItems) * itemWidth;
+
+            if (Math.abs(position) < maxTranslate) {
+              position -= itemWidth;
+              track.style.transform = `translateX(${position}px)`;
+            }
+
+
+          }
+
+          function moveLeft() {
+          const track = document.getElementById("productTrack");
+          const itemWidth = track.children[0].offsetWidth + 10;
+
+          if (position < 0) {
+          position += itemWidth;
+          track.style.transform = `translateX(${position}px)`;
+          }
+          }
 
 </script>
 
