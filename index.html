@@ -77,6 +77,7 @@
     <p>Here you can find the latest updates about flowers and products. Stay tuned for more!</p>
   </div>
 </div>
+
 <h2 class="slider-title" style="text-align: center;font-size:60px;font-family: Arial, sans-serif;color:rgb(180, 100, 160)">Our product</h2>
 
 <!--new categories-->
@@ -217,7 +218,7 @@ if (position < 0) {
   <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button>
 </div>
 
-
+<!-- ✅ Script moved here -->
 <script>
   let currentSlide = 0;
   const slides = document.querySelectorAll(".slide");
@@ -238,9 +239,11 @@ if (position < 0) {
     showSlide(currentSlide);
   }
 
+  // Initialize
   showSlide(currentSlide);
 </script>
-  
+
+<!--شريط الصور-->
 <div style="text-align: center; padding: 40px;color:rgb(180, 100, 160)">
   <h2 style="font-size: 24px; margin-bottom: 20px;">Follow Us</h2>
   <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px;">
@@ -260,7 +263,49 @@ if (position < 0) {
 
 
 
+
+<!-- Scripts -->
 <script>
+  // Get the query parameter from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('q');  // Get the search query from the URL
+
+  // If no query is provided in the URL, show a message
+  if (!query) {
+    document.getElementById('results').innerHTML = 'Please enter a search query.';
+  } else {
+    // Data to search through: Content of different pages
+    const pages = [
+      { url: 'index.html', content: 'Flowers, beautiful flowers, and floral arrangements' },
+      { url: 'bouquet.html', content: 'Different types of flowers such as roses and lilies' },
+      { url: 'vases.html', content: 'Elegant vases for use in any occasion' },
+      { url: 'v1.html', content: 'Contact us through this page for all details' },
+      // You can add more pages here
+    ];
+
+    // Filter pages that contain the query word in their content
+    const results = pages.filter(page => page.content.toLowerCase().includes(query.toLowerCase()));
+
+    // Display the results
+    const resultsContainer = document.getElementById('results');
+    if (results.length > 0) {
+      results.forEach(result => {
+        const resultDiv = document.createElement('div');
+        resultDiv.innerHTML = `<a href="${result.url}">${result.url}</a> - ${result.content}`;
+        resultsContainer.appendChild(resultDiv);
+      });
+    } else {
+      resultsContainer.innerHTML = 'No matching results found.';
+    }
+  }
+</script>
+<script>
+  function search() {
+  const query = document.getElementById('searchInput').value.trim();
+  if (query !== "") {
+    window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+  }
+
   }
 
   let currentImageIndex = 0;
@@ -287,6 +332,29 @@ if (position < 0) {
   window.onload = function () {
     showImage(currentImageIndex);
   };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const storedLang = localStorage.getItem("language") || "en";
+
+    function changeLanguage(lang) {
+      localStorage.setItem("language", lang);
+      const elements = document.querySelectorAll("[data-en]");
+      elements.forEach(function (element) {
+        element.textContent = element.getAttribute(`data-${lang}`);
+      });
+    }
+
+    changeLanguage(storedLang);
+
+    const flag = document.getElementById("nav-flag");
+    if (flag) {
+      flag.addEventListener("click", function () {
+        const currentLang = localStorage.getItem("language") || "en";
+        const newLang = currentLang === "en" ? "ar" : "en";
+        changeLanguage(newLang);
+      });
+    }
+  });
 </script>
 <!-- footer -->
 <div class="footer-wrapper">
