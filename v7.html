@@ -45,7 +45,7 @@
  <div class="message">
                       
   <span class="cart" >   <button type="submit" class="add" onclick="openPopup()" >  <span class="material-icons">
-       shopping_cart</span>  Add To Cart  </button> </span>
+       shopping_cart</span>  Add To Cart  </button> <button onclick="addToCart()"> Add To Cart </button> </span>
             <div class="popup" id="popup">
               <img src="https://i.postimg.cc/Bnsg5bDd/photo-2025-05-03-01-21-22-removebg-preview.png">
             <span class="success" > Success </span>
@@ -56,15 +56,41 @@
            </div>
            </div>
           <script src="script.js"></script>
-          <script>let popup = document.getElementById("popup");
-           function openPopup()
-           {
-              popup.classList.add("open-popup");
-           }
+        <script>
+           function addToCart(){ 
+                const product={
+               id: 15,
+name: "Nature’s Caress",
+price: 800,
+image: "https://i.postimg.cc/NjZQyhdZ/photo-2025-04-28-23-35-15-removebg-preview.png",
+quantity: 1
+                };
+                let basket = JSON.parse(localStorage.getItem('basket')) || [];
+                const existingProduct = basket.find(p => p.id === product.id);
+                if(existingProduct){
+                  existingProduct.quantity += 1;
+                } else{
+                  basket.push(product);
+                }
+            localStorage.setItem("basket",JSON.stringify(basket));
+            alert();
+              
+           
+           openPopup();
+            }
+            function goToCart(){
+                window.location.href ="basket.html";
+            }
+            function openPopup(){
+                document.getElementById("popup").classList.add("open-popup");
+            }
            function closePopup()
            {
-              popup.classList.remove("open-popup");
-           }</script>
+              document.getElementById("popup").classList.remove("open-popup");
+
+           } 
+        
+           </script>
 </div> 
     <div class="image-container">
       <img src ="https://i.postimg.cc/NjZQyhdZ/photo-2025-04-28-23-35-15-removebg-preview.png" alt=" common sunflower " width="200" height="150" class=" custom-image"> <br>
