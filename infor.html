@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="infor.css">
 </head>
 <body>
+  <form id="addressForm">
   <!-- Navigation bar -->
 <nav class="navbar">
   <div class="nav-wrapper">
@@ -78,41 +79,33 @@
 
         <label><input type="checkbox" name="defaultAddress"> Use as my default address</label>
       </div>
-
+     <form id="addressForm">
       <div class="submit">
         <button type="submit">Send</button>
       </div>
+      </form>
     </div>
   </div>
   <script>
- alert("your address has been submitted!);
-document.getElementById("phone").addEventListener("input", function() {
-  const phoneValue = this.value;  
+   document.getElementById("addressForm").addEventListener("submit", function(e) {
+    e.preventDefault();  
+    alert("Your address has been submitted!");
+  }); 
+      document.getElementById("phone").addEventListener("input", function() {
+    const phoneValue = this.value;
   const phonePattern = /^[0-9]{10,15}$/;
 if (!phonePattern.test(phoneValue) && phoneValue.length > 0) {
   alert("Please enter a valid phone number with 10–15 digits (numbers only).");
 
-  window.onload = function() {
-           
-            if (localStorage.getItem('dark-mode') === 'enabled') {
-                document.body.classList.add('dark-mode');
-            }
-        };
 
-        
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            
-           
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
-            }
-        }
   }
 });
-   
+
+
+  function toggleDarkMode() {
+    
+    document.body.classList.toggle('dark-mode');
+  }
 
   </script>
 </body>
