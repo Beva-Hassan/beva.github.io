@@ -10,11 +10,7 @@
 <body> 
 
   <pre>
-  <!-- Top banner 
-<div class="top-banner">
-  "Fresh Picks, Quick Clicks – Happiness in Minutes"
-</div> -->
-
+ 
 <nav class="navbar">
   <div class="nav-wrapper">
     <div class="nav-left">
@@ -60,41 +56,39 @@
            </div>
            </div>
           <script src="script.js"></script>
-       <script>
+          <script>
     function addToCart(){ 
-         const product={
-            
-            id: 21,
-            name: "Blushed Elegance",
-            price: 4800,
-            image: "https://i.postimg.cc/TwfMmTgN/photo-2025-04-28-22-08-17-removebg-preview",
-            quantity: 1
-         };
+    const product = {
+        id: 21,
+        name: "Blushed Elegance",
+        price: 4800,
+        image: "https://i.postimg.cc/TwfMmTgN/photo-2025-04-28-22-08-17-removebg-preview",
+        quantity: 1
+    };
 
-
-         let basket = JSON.parse(localStorage.getItem('basket')) || [];
-         const existingProduct = basket.find(p => p.id === product.id);
-         if(existingProduct){
-           existingProduct.quantity += 1;
-         } else{
-           basket.push(product);
-         }
-     localStorage.setItem("basket",JSON.stringify(basket));
-     alert();
-       
-    
+    let basket = JSON.parse(localStorage.getItem('basket')) || [];
+    const existingProduct = basket.find(p => p.id === product.id);
+    if(existingProduct){
+        existingProduct.quantity += 1;
+    } else{
+        basket.push(product);
+    }
+    localStorage.setItem("basket", JSON.stringify(basket));
     openPopup();
-     function goToCart(){
-         window.location.href ="basket.html";
-     }
-     function openPopup(){
-         document.getElementById("popup").classList.add("open-popup");
-     }
-    function closePopup()
-    {
-       document.getElementById("popup").classList.remove("open-popup");
+}
 
-    } 
+function goToCart(){
+    window.location.href = "basket.html";
+}
+
+function openPopup(){
+    document.getElementById("popup").classList.add("open-popup");
+}
+
+function closePopup(){
+    document.getElementById("popup").classList.remove("open-popup");
+}
+
  
     </script>
 </div> 
@@ -177,4 +171,4 @@
 
 
 </body>
-</html>
+</html> 

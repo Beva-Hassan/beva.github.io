@@ -31,9 +31,7 @@ arrowlog.onclick = function(){
 }
 dark.onclick=function toggleDarkMode(){
     
-    // document.body.style.backgroundColor= '#000000f3';
-    // row.style.backgroundColor='rgba(233, 160, 224, 0.99)'; 
-    // or.style.color='white';
+   
                document.body.classList.toggle('dark-mode');
             
            
@@ -43,5 +41,4 @@ dark.onclick=function toggleDarkMode(){
                 localStorage.setItem('dark-mode', 'disabled');
             }
         }
-
 

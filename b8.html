@@ -62,41 +62,42 @@
            </div>
           <script src="script.js"></script>
   <script>
-    function addToCart(){ 
-         const product={
-            
-            id: 24,
-name: "Lavender Whispers",
-price: 4450,
-image: "https://i.postimg.cc/4NdGB4Mr/photo-2025-04-28-23-04-05-removebg-preview.png",
-quantity: 1
-         };
+ function addToCart(){ 
+    const product = {
+        id: 24,
+        name: "Lavender Whispers",
+        price: 4450,
+        image: "https://i.postimg.cc/4NdGB4Mr/photo-2025-04-28-23-04-05-removebg-preview.png",
+        quantity: 1
+    };
 
+    let basket = JSON.parse(localStorage.getItem('basket')) || [];
+    const existingProduct = basket.find(p => p.id === product.id);
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        basket.push(product);
+    }
+    localStorage.setItem("basket", JSON.stringify(basket));
 
-         let basket = JSON.parse(localStorage.getItem('basket')) || [];
-         const existingProduct = basket.find(p => p.id === product.id);
-         if(existingProduct){
-           existingProduct.quantity += 1;
-         } else{
-           basket.push(product);
-         }
-     localStorage.setItem("basket",JSON.stringify(basket));
-     alert();
-       
-    
+   
+
     openPopup();
-     function goToCart(){
-         window.location.href ="basket.html";
-     }
-     function openPopup(){
-         document.getElementById("popup").classList.add("open-popup");
-     }
-    function closePopup()
-    {
-       document.getElementById("popup").classList.remove("open-popup");
+}
 
-    } 
- 
+function openPopup() {
+    document.getElementById("popup").classList.add("open-popup");
+}
+
+function closePopup() {
+    document.getElementById("popup").classList.remove("open-popup");
+}
+
+function goToCart() {
+    window.location.href = "basket.html";
+}
+
+
     </script>
 </div> 
     <div class="image-container">
