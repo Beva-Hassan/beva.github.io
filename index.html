@@ -1,327 +1,728 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="arabic" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>Aura Flora</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .fade-in-text {
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-</head>
-<body>
- 
-
-<!-- Navigation bar -->
-<nav class="navbar">
-  <div class="nav-wrapper">
-    <div class="nav-left">
-      <img class="nav-logo" src="https://cdn.pixabay.com/photo/2012/04/13/00/44/leaves-31399_1280.png" alt="">
-      <a href="index.html" class="brand-name">
-        <span style="color: rgb(180, 100, 160);"> Aura Flora</span>
-      </a>
-    </div>
-    <div class="nav-right">
-      <a href="log.html" class="nav-item" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" alt="Login Icon">
-        Log In
-      </a>
-      <a href="basket.html" class="nav-item"target="_blank" >
-        <img src="https://cdn-icons-png.flaticon.com/128/263/263142.png" alt="Basket Icon">
-        Basket
-      </a>
-      
-      <img class="nav-photo" src="https://img.icons8.com/?size=64&id=49318&format=png">
-      <div class="mode-images" >
-        <img onclick="toggleDarkMode()" src="https://cdn-icons-png.flaticon.com/128/606/606807.png" alt=" " title="Dark Mode">
-      </div>
-      
-      
-      
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero-image" style="position: relative;">
-  <div style="width: 100%; height: 100vh; overflow: hidden;">
-    <img src="https://images.pexels.com/photos/5857828/pexels-photo-5857828.jpeg" 
-         alt="Top Banner" 
-         style="width: 100%; height: 100%; object-fit: cover;">
-  </div>
-  <div style="position: absolute; top: 30%; left: 5%; color: white; font-size: 2em ;">
-    <div class="fade-in-text">Welcome to</div>
-    <div class="fade-in-text" >Aura Flora</div>
-    <div class="fade-in-text">Natural Beauty in Every Bloom</div>
-
-  </div>
-</section>
-
-
-
-
-<!-- New Section -->
-<div class="new-section">
-  <div class="new-image">
-    <img id="slider-image" src="https://cdn.pixabay.com/photo/2017/02/01/14/51/hand-2027922_1280.jpg" alt="Flower Image">
-  </div>
-  <div class="new-text">
-    <h2>New</h2>
-    <p>Here you can find the latest updates about flowers and products. Stay tuned for more!</p>
-  </div>
-</div>
-
-<h2 class="slider-title" style="text-align: center;font-size:60px;font-family: Arial, sans-serif;color:rgb(180, 100, 160)">Our products</h2>
-
-<!--new categories-->
-<div style="position: relative; width: 80%; margin: auto; overflow: hidden; border: 1px solid #ccc; padding: 10px;">
-
- 
-  <div id="productTrack" style="display: flex; transition: transform 0.5s ease;">
-    <div class = "amazing" data-name = "Breeze of Breauty">
-  <img src="https://i.postimg.cc/h4MgLQCL/photo-2025-04-28-23-06-27-removebg-preview-1.png" alt="Breeze of Breauty " width="200" height="150" class="image">
-  
-  <span class="heb" title  = "Go to product page" >Breeze of Breauty </span>
-  <span > <span class="price-box" >  <b>6000</b> EGP </span> </span >
- </div> 
- 
- <div class = "amazing" data-name = "Blossom Dreams">
- <img src="https://i.postimg.cc/QdK3Z4jm/photo-2025-04-28-22-34-42-removebg-preview.png" alt="Blossom Dreams "width="200" height="150" class="image">
- 
-  <span class="heb"  title="Go to product page">Blossom Dreams</span> 
-  <span > <span class="price-box" >  <b>5000</b> EGP </span> </span >
- </div>
-
- <div class = "amazing" data-name = "Amour in Bloom">
- <img src="https://i.postimg.cc/PqmnPCp8/photo-2025-04-28-22-01-39-removebg-preview.png" alt="Amour in Bloom " width="200" height="150" class="image">
- 
- <span class="heb"  title="Go to product page">Amour in Bloom</span>
- <span > <span class="price-box" >  <b>4500</b> EGP </span> </span >
- </div>  
- 
-
-<div class = "amazing" data-name = "red plant ">  
- <img src="https://i.postimg.cc/8CTtmcXv/p4.png" alt="red plant " width="200" height="150" class="image">
- 
-  <span class="heb"  title="Go to product page">Scarlet Bliss Rose </span>
-  <span > <span class="price-box" >  <b>700</b> EGP </span> </span >
- </div>
- <div class = "amazing" data-name = "common sunflowers">
- <img src="https://i.postimg.cc/Ssf4tnmp/photo-2025-04-28-23-33-04-removebg-preview.png" alt="common sunflowers" width="200" height="150" class="image">
- 
-  <span class="heb" title="Go to product page">Golden Glow Vase</span>
-  <span > <span class="price-box" >  <b>1500</b> EGP </span> </span >
- </div> 
- 
-</div>
-
-<button onclick="moveLeft()" style="position: absolute; top: 40%; left: 0; background: pink; border: none; font-size: 24px; padding: 5px;">‹</button>
-<button onclick="moveRight()" style="position: absolute; top: 40%; right: 0; background: pink; border: none; font-size: 24px; padding: 5px;">›</button>
-
-
-</div>
-
-<!-- Quick access links -->
-<div class="quick-links">
-<h2 href="flowers.html" style="text-align: center;font-size:60px;font-family: Arial, sans-serif;color:rgb(180, 100, 160)">Categories</h2>
-</div>
-
-<!-- Flower gallery -->
-<div class="flowers-gallery">
-<div class="flower-item">
-  <a href="bouquet.html">
-    <img src="https://www.flowrista.com/Uploads/Product/b3477ab7-b99c-4eb2-9a9e-92f8aedbf7a2.jpg" alt="">
-  </a>
-  <p>BOUQUETS</p>
-</div>
-<div class="flower-item">
-  <a href="vases.html">
-    <img src="https://flowerssoul.com/upload/152bcfd3928eeee37e8d3096a87d5a15_compressed.jpeg" alt="">
-  </a>
-  <p>VASES</p>
-</div>
-<div class="flower-item">
-  <a href="second.html">
-    <img src="https://www.flowrista.com/Uploads/Product/66f4f4f2-a230-44f5-a344-31ddec742960.jpg" alt="">
-  </a>
-  <p>POTTED ROSES</p>
-</div>
-</div>
-
-<h2 class="slider-title">Our Benefits</h2>
-<section class="benefits-section">
-  <div class="slider-container">
-    <div class="slide active">
-      <img src="https://i.postimg.cc/xnhqfSqQ/shipping1.jpg" alt="Image 1">
-      <div class="slide-content">
-        <h2>Shipping</h2>
-        <p>Experience same-day flower delivery to Cairo and Giza. Swift shipping, ensuring your sentiments are delivered promptly.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div style="text-align: center; padding: 40px;color:rgb(180, 100, 160)">
-  <h2 style="font-size: 24px; margin-bottom: 20px;">Follow Us</h2>
-  <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px;">
-    <img src="https://i.postimg.cc/NF75XFfb/insta2.png" alt="ايقونة انستا" style="width: 50px; height: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-    <div style="font-size: 24px;">@Aura_Flora</div>
-  </div>
-  <img src="https://i.postimg.cc/SK32FHvL/1.png" alt="صورة مجمعة" style="width: 80%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  
-</div>
-<!-- About the company -->
-<h3 class="h3">Aura Flora</h3>
-<div class="from-company">
-  Aura Flora offers a 100% Customer Satisfaction Guarantee. We strive to make your experience buying flowers online with us unforgettable. Whether you are looking for same day flowers or next day flower delivery, AuraFlora.com promises to deliver great quality, personable customer service and stunning florist arranged bouquets.
-  We know that when you send flowers it comes from the heart, so we work hard to ensure your arrangements are created with the freshest flowers and delivered on time to help celebrate every occasion.
-  All of us at Aura Flora would like to not only be here for you today, but for all your future flower needs.
-</div>
-
-
-<!-- footer -->
-<div class="footer-wrapper">
-  <footer class="main-footer">
-    <div class="footer-container">
-      
-      <div class="footer-section">
-        <h3>Get To Know Us</h3>
-        <ul>
-          <li><a href="aboutus.html" target="_blank">About Us</a></li>
-          <li><a href="faqs.html" target="_blank">FAQs</a></li>
-          <li><a href="Policy.html" target="_blank">Privacy Policy</a></li>
-          <li><a href="contact.html" target="_blank">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>My Account</h3>
-        <ul>
-          <li><a href="log.html" target="_blank">Log In</a></li>
-          <li><a href="basket.html" target="_blank">Basket</a></li>
-          <li><a href="infor.html" target="_blank">My Orders</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>022856466</li>
-          <li>0124576488</li>
-          <li>0105589690</li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Payment Methods</h3>
-        <div class="payment-logos">
-          <img src="https://i.postimg.cc/SRdVrWyv/cash1.jpg" alt="أمان"  style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/SsW-gnBHq/cash2.png"  alt="أبل باي" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/2j7Hrf47/cash3.png"  alt="الايد الي ماسكة ورد" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/7Zd9mPkw/cash8.png"  alt="SYMPL" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/GtLxHHkJ/cash11.png"  alt="value" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/Ss7GSW-zx/cash12.png"  alt="visa" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/rsMQxhL4/cash4.jpg"  alt="Contact" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/Gh3XpSKw/cash5.png"  alt="فرصة" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/43c5MCft/cash6.png"  alt="master card" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/zXd0HS2L/cash7.png"  alt="اورنج كاش" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/7Zd9mPkw/cash8.png"  alt="بايموب" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/vZcXrgC0/cash9.png"  alt="بريميوم كارد" style="width: 50px; height: auto;">
-          <img src="https://i.postimg.cc/4yWbtsPC/cash13.png"  alt="فودافون كاش" style="width: 50px; height: auto;">
-
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <div class="bottom-footer">
-    © 2025 Auraflora. All rights reserved.
-  </div>
-</div>
-
-
-
-<script>
-              
-        let currentImageIndex = 0;
-        let sliderImages = [
-          "https://www.flowerssoul.com/upload/6655a4688bad312f23833edfb8a002e4_compressed.jpeg",
-          "https://www.flowerssoul.com/upload/1fc4133cdbebd0a7ad6d36b6fa77c150_compressed.jpeg",
-          "https://www.flowerssoul.com/upload/6e8e187f9c456d2e4a808b3b7cd5f652_compressed.jpeg",
-          "https://www.flowerssoul.com/upload/9912875c64cba4366ff9380077ff3edd_compressed.jpeg"
-        ];
-
-        function showImage(index) {
-          const img = document.getElementById("slider-image");
-          if (img) {
-            img.src = sliderImages[index];
-          }
+    <meta charset="UTF-8">
+    <title>مدرسينك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap&subset=arabic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Tahoma', 'Arial', sans-serif;
         }
-                function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
-            showImage(currentImageIndex);
-          }
-          setInterval(nextImage, 2000);
+        .overphoto {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .contere {
+            position: relative;
+            height: 100vh; 
+            overflow: hidden;
+        }
+        .contere img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .text {
+            position: fixed;
+            top: 0;
+            color: aliceblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            right: 0;
+            left: 0;
+            z-index: 10;
+            transition: all 0.3s ease; 
+        }
+        .icon img{
+            height: 20px;
+            width: 20px;
+        }
+         body.dark-mode {
+        background-color: #121212;
+        }
+    
+        body.dark-mode .text.scrolled {
+        background-color: rgba(0, 188, 212, 0.9); /* الأزرق اللي عندك يفضل واضح */
+        color: #fff;
+        }
+         .nav-dark-mode {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-dark-mode img {
+            width: 40px;
+            height: 40px;
+            right: 65%;
+            top: 16px;
+        }
+        
+        .text h1 {
+            margin: 0;
+            font-family: 'Rakkas', cursive;
+            font-size: 28px;
+        }
 
-          window.onload = function () {
-            showImage(currentImageIndex);
-          }
+        .text.scrolled {
+            background-color: rgba(0, 188, 212, 0.95);
+            color: white;   
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+                
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .text h3 {
+            padding: 8px 15px;
+            margin: 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+             border-radius: 50px;
+            border: 2px solid #00bcd4;
+            color: white;
+        }
+        .text.scrolled h3{
+             background-color: white; 
+            color: #00bcd4;
+        }
+    
+        .text2 {
+            color: aliceblue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            width: 80%;
+        }
+        .text2 h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-family: 'Rakkas', cursive;
+        }
+        .text2 p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .slide-in {
+            opacity: 0;
+            transform: translateX(100px); 
+            color: #00bcd4;
+            padding: 15px;  
+            margin: 40px auto; 
+            width: fit-content;
+            font-family: 'Rakkas', cursive;
+            font-size: 40px;
+            text-align: center;
+        }
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 0.8s ease;
+        }
+        .spacer {
+            height: 50px;
+        }
+        .photo {
+            padding: 20px;
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .photo-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center; 
+            width: 280px;
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+         .photo-row{ 
+            display: flex;
+             justify-content: center;
+              gap:5x;
+               flex-wrap: wrap; 
+            } 
+        .photo-card2{ 
+            position: relative;
+            width: 250px;
+            height: 250px; 
+            margin: 70px; } 
+        .photo-card2 img{
+             width: 100%;
+             height: 100%;
+              border-radius: 20px; }
+         .photo-min{
+             position: absolute;
+             font-size: 45px;
+              font-weight: bold;
+               text-align: center; 
+               color:#006064;
+                top: -10px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+                transition: transform 0.3s ease;
+             } 
+         .photo-min:hover { 
+            transform: scale(1.05) translateY(-10px);
+         }
+        .img-container {
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        .img-container img {
+            width: 100%;
+            height: auto; 
+            transition: transform 0.5s ease;
+        }
+        .img-container img:hover {
+            transform: scale(1.05);
+        }
+         .photo-text h2 {
+            color: #006064;
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .photo-text h3 {
+            color: #424242;
+            font-size: 18px;
+            margin: 10px 0;
+            border: none;
+        }
+        .photo-text p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        .photo-text .price {
+            font-weight: bold;
+            color: #00bcd4;
+        }
+        .photo-text del {
+            color: #bdbdbd;
+            font-size: 16px;
+        } 
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 30px 0;
+            box-sizing: border-box;
+            margin: 30px 0;
+        }
+        .photo2-slider {
+            width: 100%;
+            overflow: hidden;
+        }
+        .photo2-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out; 
+            gap: 25px;
+            padding: 0 5%;
+        } 
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 188, 212, 0.8);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            padding: 12px 18px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .slider-btn:hover {
+            background-color: rgba(0, 188, 212, 1);
+        }
+        .prev-btn {
+            left: 10px;
+        }
 
-        window.onload = function() {
-           
-            if (localStorage.getItem('dark-mode') === 'enabled') {
-                document.body.classList.add('dark-mode');
-            }
-        };
+        .next-btn {
+            right: 10px;
+        }
 
         
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
+        /* Footer Styles - التصميم المحسن للفوتر */
+        .footer-container {
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .footer {
+            position: relative; 
+            height: 500px;
+            overflow: hidden; 
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .footer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-bottom {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+            color: white;
+            font-family: 'Rakkas', cursive;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .slide-bottom h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .slide-bottom p {
+            font-size: 0.8em;
+            margin: 8px 0;
+            font-family: 'Tahoma', sans-serif;
+        }
+        .icon {
+            display: flex; 
+            position: absolute;
+            top: 83%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+            justify-content: center;  
+            gap: 30px; 
+            width: 100%;
+        }
+        .icon img {
+            width: 50px;
+            height: auto;
+            padding: 12px;
+            z-index: 40;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .icon img:hover {
+            transform: scale(1.15);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* تصميم القسم السفلي الإضافي */
+        .footer-bottom {
+            width: 100%;
+            background-color:black;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            margin: 0;
+        }
+        .footer-bottom p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            /* cursor: pointer; */
+        }
+        
+        .menu-toggle span {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        /* تحسينات للشاشات الصغيرة */
+        @media (max-width: 768px) {
             
-           
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
+            .menu-toggle{
+                display: flex;
+             }
+    
+            .nav-links {
+                display: none; 
+                flex-direction: column;   /* خليها عمودية */
+                background:white; 
+                position: absolute;
+                top: 70px;  /* تحت الهيدر */
+                right: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px;
+                border-radius: 0 0 12px 12px;
+                z-index: 9999;
+
+            }
+
+            .nav-links h3
+             {
+                margin: 10px 0;
+                text-align: center;
+                 color: #00bcd4;
+            }
+
+            .nav-links.active {
+                    display: flex; /* تظهر لما نضغط */
+                }
+
+            .text2 h1 {
+                font-size: 2.5rem;
+            }
+            .text2 p {
+                font-size: 1.1rem;
+            }
+            .slide-in {
+                font-size: 30px;
+            }
+            .photo {
+                gap: 30px;
+            }
+             .photo-card2{
+                 height: 300px;
+            }
+            .slider-btn {
+                padding: 8px 14px;
+                font-size: 18px;
+            }
+            .photo-min{
+                top: -35px;
+            }
+            .slide-bottom{
+                top: 5%;
+            }
+            .slide-bottom h1 {
+                font-size: 2em;
+            }
+            .footer{
+                height: 600px;
+            }
+            .icon {
+                top: 80%;
+            }
+            .icon img {
+                width: 50px;
             }
         }
-            let position = 0;
-            function moveRight() {
-            const track = document.getElementById("productTrack");
-            const itemWidth = track.children[0].offsetWidth + 10; 
-            const containerWidth = track.parentElement.offsetWidth;
-            const totalItems = track.children.length;
-            const visibleItems = Math.floor(containerWidth / itemWidth);
-            const maxTranslate = (totalItems - visibleItems) * itemWidth;
+    </style>
+</head>
+<body>
 
-            if (Math.abs(position) < maxTranslate) {
-              position -= itemWidth;
-              track.style.transform = `translateX(${position}px)`;
+    <!-- صورة الغلاف -->
+    <div class="contere">
+        <img src="https://images.freeimages.com/variants/cW371SLHFD7ucxEX4bquh8q3/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500">
+        <div class="overphoto"></div>
+        <div class="text">
+            <a href="index.html" style="text-decoration: none; color: white;">
+                <h1>مدرسينك</h1>
+            </a>
+
+             <button id="darkModeToggle" class="nav-dark-mode">
+                    <img id="darkIcon" src="https://cdn-icons-png.flaticon.com/128/5558/5558234.png" alt="وضع الليل">
+                </button>
+             <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+           <div class="nav-links" id="navLinks">
+            <h3>ادخل سجل متفكرش</h3>
+            <h3>سجلت قبل كدا</h3>
+        </div>
+        </div>
+        <div class="text2">
+            <h1>منصة مدرسينك</h1>
+            <p>في خدمة كل مدرس وطالب على مدار الـ 24 ساعة</p>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
+
+    <div class="slide-in">الكورسات <br>المقترحه</div>
+    <div class="photo">
+        <div class="photo-card">
+            <div class="img-container">
+                <a href="mo1.html">
+                <img src="https://cdn-icons-png.flaticon.com/256/7421/7421798.png">
+                </a>
+            </div>
+            <div class="photo-text">
+                <h2>مجمد عبد العزيز</h2>
+                <h3>كورس النحو كامل</h3>
+                <p><span class="price">400 جنيه</span> بدل من <del>600</del></p>
+            </div>
+        </div>
+        <div class="photo-card">
+            <div class="img-container">
+                <a href="eed1.html">
+                <img src="https://cdn-icons-png.flaticon.com/256/4681/4681666.png">
+                </a>
+            </div>
+            <div class="photo-text">
+                <h2>عيدأسامه</h2>
+                <h3>كورس اول وحده </h3>
+                <p><span class="price">350 جنيه</span> بدل من <del>430</del></p>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="slide-in">اختر مدرسك</div>
+     <div class="slider-container">
+        <button class="slider-btn prev-btn">&#10094;</button>
+                <div class="photo2-slider">
+                <div class="photo2-track">
+                <div class="photo-card">
+                    <a href="adel.html" style="text-decoration: none;color: black;">
+                <img src="https://cdn-icons-png.flaticon.com/256/13725/13725949.png">
+                <div class="photo-text2">
+                    <h2>عادل محمد</h2>
+                    <h3>مدرس انجليزي</h3>
+                </div>
+                    </a>
+            </div>
+         <div class="photo-card" >
+            <a href="eed.html"  style="text-decoration: none; color: black;">
+                <img src="https://cdn-icons-png.flaticon.com/256/4681/4681666.png">
+                <div class="photo-text2">
+                    <h2>عيد أسامه </h2>
+                    <h3>مدرس علوم</h3>
+                </div>
+            </a>
+                </div>
+                <div class="photo-card"  >
+                    <a href="abd.html"  style="text-decoration: none;color: black;">
+                <img src="https://cdn-icons-png.flaticon.com/256/11932/11932723.png">
+                <div class="photo-text2">
+                    <h2>عبد الله عيسي </h2>
+                    <h3>مدرس دراسات </h3>
+                </div>
+                    </a>
+                </div>
+                <div class="photo-card"  >
+                    <a href="hane.html"  style="text-decoration: none;color: black;">
+                <img src="https://cdn-icons-png.flaticon.com/256/11116/11116744.png">
+                <div class="photo-text2">
+                    <h2>هاني أحمد</h2>
+                    <h3>مدرس رياضات</h3>
+                </div>
+                    </a>
+                </div>
+
+                <div class="photo-card" >
+                    <a href="mo.html" style="text-decoration: none;color: black;" >
+                <img src="https://cdn-icons-png.flaticon.com/256/7421/7421798.png">
+                <div class="photo-text2">
+                    <h2>محمد عبد العزبز </h2>
+                    <h3>مدرس لغه عربيه </h3>
+                    </div>
+                    </a>
+                </div>
+                <div class="photo-card" >
+                    <a href="fatma.html"  style="text-decoration: none;color: black;">
+                <img src="https://cdn-icons-png.flaticon.com/256/10757/10757193.png">
+                <div class="photo-text2">
+                    <h2>فاطمه محمد </h2>
+                    <h3>مدرسه تربيه دينيه</h3>
+              </div>
+                    </a>
+                </div>   
+                </div>
+                </div>
+                 <button class="slider-btn next-btn">&#10095;</button>
+     </div>
+     
+
+
+
+    <div class="slide-in">احنا ليه </div>
+             <div class="photo-row">
+                <div class="photo-card2">
+                    <img src="https://media.istockphoto.com/id/945663596/photo/texture-of-blue-paper.jpg?s=612x612&w=0&k=20&c=dWe4c4_haijXdwZ2uxeK69MzUgpkxDfuyhveTPX_c04=">
+                     <div class="photo-min">
+                        <p> نفتح لك باب، ونرسم لك درب</p>
+                     </div>
+                </div>
+                <div class="photo-card2">
+                    <img src="https://media.istockphoto.com/id/945663596/photo/texture-of-blue-paper.jpg?s=612x612&w=0&k=20&c=dWe4c4_haijXdwZ2uxeK69MzUgpkxDfuyhveTPX_c04=">
+                     <div class="photo-min">
+                        <p> معنا الحلم يقين، والطريق يزين</p>
+                     </div>
+                </div>
+                  <div class="photo-card2">
+                    <img src="https://media.istockphoto.com/id/945663596/photo/texture-of-blue-paper.jpg?s=612x612&w=0&k=20&c=dWe4c4_haijXdwZ2uxeK69MzUgpkxDfuyhveTPX_c04=">
+                     <div class="photo-min">
+                        <p>معانا التعليم متعة، والحلم بداية رحلة</p>
+                     </div>
+                </div>
+                
+                <div class="photo-card2">
+                    <img src="https://media.istockphoto.com/id/945663596/photo/texture-of-blue-paper.jpg?s=612x612&w=0&k=20&c=dWe4c4_haijXdwZ2uxeK69MzUgpkxDfuyhveTPX_c04=">
+                     <div class="photo-min">
+                        <p>المعرفة قوة, والجدّ بداية كل خطوة</p>
+                     </div>
+                </div>
+                <div class="photo-card2">
+                    <img src="https://media.istockphoto.com/id/945663596/photo/texture-of-blue-paper.jpg?s=612x612&w=0&k=20&c=dWe4c4_haijXdwZ2uxeK69MzUgpkxDfuyhveTPX_c04=">
+                     <div class="photo-min">
+                        <p> سؤال وجواب, يفتحلك ألف باب </p>
+                     </div>
+                </div>
+                <div class="photo-card2">
+                    <img src="https://media.istockphoto.com/id/945663596/photo/texture-of-blue-paper.jpg?s=612x612&w=0&k=20&c=dWe4c4_haijXdwZ2uxeK69MzUgpkxDfuyhveTPX_c04=">
+                     <div class="photo-min">
+                        <p>  نتحدى ونفوز، ونكتشف وننجح </p>
+                     </div>
+                </div>
+             </div> 
+   
+
+    <!-- الفوتر المحسن -->
+    <div class="footer-container">
+        <div class="footer">
+            <img src="https://media.istockphoto.com/id/1010238190/photo/blue-defocused-blurred-motion-abstract-background.webp?b=1&s=612x612&w=0&k=20&c=gSBfGvcGjtiW1vNDglr82x-Y6FReNWz64E0QXX4Hr4k=">
+            <div class="slide-bottom">
+                <h1>مدرسينك</h1>
+                <p>للتواصل معنا: 0123456789</p>
+                <p>البريد الإلكتروني: info@madraseenak.com</p>
+                <p>تم صنعها بكل حب لطلابنا بناة المستقبل</p>
+            </div>
+            <div class="icon">
+                <a href="https://facebook.com">
+                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047435.png" alt="فيسبوك">
+                </a>
+                <a href="https://tiktok.com">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2504/2504942.png" alt="تيك توك">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="انستجرام">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2023 منصة مدرسينك. جميع الحقوق محفوظة</p>
+    </div>
+
+    <script>
+       
+    // كود الأنيميشن للعنوان
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
+        });
+    });
 
+    const slideElements = document.querySelectorAll('.slide-in');
+    slideElements.forEach(el => observer.observe(el));
 
-          }
+    // تغيير الهيدر مع السكروول
+    window.addEventListener('scroll', () => {
+        const text = document.querySelector('.text');
+        const contereHeight = document.querySelector('.contere').offsetHeight;
+        if (window.scrollY > contereHeight) {
+            text.classList.add('scrolled');
+        } else {
+            text.classList.remove('scrolled');
+        }
+    });
 
-          function moveLeft() {
-          const track = document.getElementById("productTrack");
-          const itemWidth = track.children[0].offsetWidth + 10;
+    // فتح وقفل القائمة
+    document.getElementById('menuToggle').addEventListener('click', function () {
+        document.getElementById('navLinks').classList.toggle('active');
+    });
 
-          if (position < 0) {
-          position += itemWidth;
-          track.style.transform = `translateX(${position}px)`;
-          }
-          }
+    const navItems = document.querySelectorAll('.nav-links h3');
+    navItems.forEach(item => {
+        item.addEventListener('click', function () {
+            document.getElementById('navLinks').classList.remove('active');
+        });
+    });
 
-</script>
+    // ====== السلايدر ======
+    const track = document.querySelector('.photo2-track');
+    const slides = document.querySelectorAll('.photo2-track .photo-card');
+    const slideWidth = 305;
+    const totalSlides = slides.length;
+    let currentIndex = 0;
 
+    function updateSlider() {
+        const offset = -(currentIndex * slideWidth);
+        track.style.transform = `translateX(${offset}px)`;
+    }
+
+    // أسهم التحكم
+    document.querySelector('.prev-btn').addEventListener('click', () => {
+        if ( currentIndex < 0) {
+             currentIndex++;
+        updateSlider();}
+    }); 
+
+    document.querySelector('.next-btn').addEventListener('click', () => {
+       currentIndex--; 
+       if (currentIndex >= totalSlides) 
+       { currentIndex = totalSlides - 1; }
+        updateSlider();
+    });
+     const toggleBtn = document.getElementById('darkModeToggle');
+
+  // لما الصفحة تفتح، طبّق الوضع المحفوظ
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  // لما أضغط على الزر
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+    </script> 
 </body>
 </html>
+
+
+
